@@ -1,10 +1,14 @@
-# Contributing to *your project title*
-Hello and welcome! We are so glad that you are interested in contributing to *your project title*!
+# Contributing to MetisCode
+Hello and welcome! We are so glad that you are interested in contributing to MetisCode!
 We only have a couple of rules and we hope you enjoy the process :)
 
 ## Contributing Rules
 1. Don't move or delete any files. Only modify them.
-2. Add additional rules as per *your project title*.
+2. Add all frontend files to the [Frontend]() folder.
+3. Add all backend files to the [Backend]() folder.
+4. Add all deep learning model related files to the [Model]() folder.
+5. Add all user modelling related files to the [User]() folder.
+6. Add all knowledge base related files to the [Data]() folder.
 
 ## Contributing Process
 1. Fork the repository
