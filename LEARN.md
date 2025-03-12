@@ -9,9 +9,9 @@ We only have a couple of rules and we hope you enjoy the process :)
 1. Don't move or delete any files. Only modify them.
 2. Add all frontend files to the [Frontend]() folder.
 3. Add all backend files to the [Backend]() folder.
-4. Add all deep learning model related files to the [Model]() folder.
-5. Add all user modelling related files to the [User]() folder.
-6. Add all knowledge base related files to the [Data]() folder.
+4. Add all files related to the machine learning model into the [Model]() folder.
+5. Add all files related to user modelling into the [User]() folder.
+6. Add all files related to the knowledge base into the [Data]() folder.
 
 ## Contributing Process
 1. Fork the repository
