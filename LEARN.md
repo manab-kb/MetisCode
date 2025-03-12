@@ -1,3 +1,6 @@
+# MetisCode
+MetisCode is an adaptive coding platform designed to help users improve their programming skills by analyzing their performance and providing personalized learning experiences. The system continuously tracks key metrics such as time taken, number of attempts, and hint usage for each problem to assess a user’s strengths and weaknesses. Based on this data, the platform dynamically selects moderately challenging questions from a curated knowledge base, ensuring an engaging yet manageable learning curve. Additionally, AI-driven personalized hints are generated for incorrect attempts by analyzing failed test cases and identifying missing concepts or edge cases, helping users correct mistakes efficiently. 
+
 # Contributing to MetisCode
 Hello and welcome! We are so glad that you are interested in contributing to MetisCode!
 We only have a couple of rules and we hope you enjoy the process :)
