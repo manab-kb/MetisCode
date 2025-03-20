@@ -1,0 +1,101 @@
+import os
+import json
+
+def parse_question_file(file_path):
+    """Extracts question, examples, and constraints from a `_Q.txt` file."""
+    question_name = os.path.basename(file_path).replace("_Q.txt", "")  # Extract question name
+    question_data = {
+        "question_name": question_name,
+        "question": "",
+        "examples": [],
+        "constraints": []
+    }
+    
+    with open(file_path, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    section = "question"  # Tracks which section we're in
+    example_buffer = []  # Temporary buffer for examples
+
+    for line in lines:
+        stripped_line = line.strip()
+        
+        if not stripped_line:
+            continue  # Skip empty lines
+
+        if stripped_line.startswith("Example"):
+            section = "examples"
+            if example_buffer:
+                question_data["examples"].append("\n".join(example_buffer))
+                example_buffer = []
+            continue
+        
+        if stripped_line.startswith("Constraints:"):
+            section = "constraints"
+            if example_buffer:
+                question_data["examples"].append("\n".join(example_buffer))
+                example_buffer = []
+            continue
+        
+        if section == "question":
+            question_data["question"] += stripped_line + " "
+        elif section == "examples":
+            example_buffer.append(stripped_line)
+        elif section == "constraints":
+            question_data["constraints"].append(stripped_line)
+    
+    # Store the last example if any
+    if example_buffer:
+        question_data["examples"].append("\n".join(example_buffer))
+
+    return question_data
+
+def find_question_files(directory):
+    """Find and parse '_Q.txt' files, categorizing them by structure."""
+    question_bank = {}
+
+    for root, dirs, files in os.walk(directory):
+        # Extract folder structure components
+        path_parts = root.split(os.sep)
+        if len(path_parts) < 3:
+            continue  # Skip invalid folders
+        
+        category = path_parts[-3]  # Algorithm category (Sliding Number, Two Pointers, Array)
+        difficulty = path_parts[-2]  # Difficulty (Easy, Medium)
+        
+        if category.lower() == "others":
+            continue  # Ignore the 'others' folder
+        
+        if difficulty not in ["Easy", "Medium"]:
+            continue  # Skip any unexpected folders
+        
+        for file in files:
+            if file.endswith("_Q.txt"):
+                file_path = os.path.join(root, file)
+                question_data = parse_question_file(file_path)
+
+                # Organizing data into JSON format
+                if category not in question_bank:
+                    question_bank[category] = {}
+                
+                if difficulty not in question_bank[category]:
+                    question_bank[category][difficulty] = []
+                
+                question_bank[category][difficulty].append(question_data)
+
+    return question_bank
+
+def main():
+    directory = input("Enter the directory path: ").strip()
+    if not os.path.isdir(directory):
+        print("Invalid directory. Please enter a valid path.")
+        return
+    
+    question_data = find_question_files(directory)
+
+    # Convert to JSON and display
+    json_output = json.dumps(question_data, indent=4, ensure_ascii=False)
+    print(json_output)
+
+if __name__ == "__main__":
+    main()
