@@ -8,7 +8,8 @@ def parse_question_file(file_path):
         "question_name": question_name,
         "question": "",
         "examples": [],
-        "constraints": []
+        "constraints": [],
+        "difficulty": ""
     }
     
     print(f"📂 Reading file: {file_path}")  # Debugging
@@ -56,6 +57,9 @@ def parse_question_file(file_path):
     
     if example_buffer:
         question_data["examples"].append("\n".join(example_buffer))
+    
+    difficulty = 0
+    question_data["difficulty"] = difficulty
 
     print(f"✅ Parsed: {question_name}")  # Debugging
     return question_data

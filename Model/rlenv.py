@@ -1,10 +1,10 @@
-import numpy as np
-import tensorflow as tf
 import gym
+import numpy as np
 from gym import spaces
+import tensorflow as tf
+from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM, Flatten
-from tensorflow.keras.optimizers import Adam
 
 class MetisEnv(gym.Env):
     def __init__(self):
@@ -17,7 +17,7 @@ class MetisEnv(gym.Env):
     def step(self, action):
         difficulty_level = np.clip(action[0], 0, 10)
 
-        time_taken = np.random.uniform(10, 300) / (difficulty_level + 1)
+        # time_taken = np.random.uniform(10, 300) / (difficulty_level + 1) # Temporarily Removed due to Dataset
         test_cases_passed = np.random.randint(1, 10) if difficulty_level < 7 else np.random.randint(0, 10)
         attempts = np.random.randint(1, 5) if difficulty_level < 7 else np.random.randint(2, 8)
         hints_used = np.random.randint(0, 3)
@@ -25,7 +25,7 @@ class MetisEnv(gym.Env):
         streak_bonus = 1 if test_cases_passed > 7 else -1
 
         self.state = np.array([
-            time_taken / 300,
+            # time_taken / 300,
             test_cases_passed / 10,
             attempts / 10,
             hints_used / 5,
@@ -34,7 +34,8 @@ class MetisEnv(gym.Env):
             streak_bonus
         ], dtype=np.float32)
 
-        reward = test_cases_passed - (0.05 * time_taken) - (0.2 * attempts) - (0.3 * hints_used) - (0.4 * fatigue)
+        # reward = test_cases_passed - (0.05 * time_taken) - (0.2 * attempts) - (0.3 * hints_used) - (0.4 * fatigue)
+        reward = test_cases_passed - (0.2 * attempts) - (0.3 * hints_used) - (0.4 * fatigue)
         
         done = False
         return self.state, reward, done, {}
