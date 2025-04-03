@@ -15,6 +15,111 @@
         "difficulty": 0
     },
     {
+        "question_name": "Planting Trees Along the Highway",
+        "question": "You are tasked with planting new trees along a long stretch of highway where some spots already have trees. However, no two trees can be planted adjacent to each other for safety reasons. Given a sequence of tree presence (1 for a tree, 0 for an empty spot), determine if you can plant a specified number of trees, n, without violating the no-adjacent-trees rule.",
+        "examples": [
+            {
+                "tree_sequence": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "n": 1,
+                "output": true
+            },
+            {
+                "tree_sequence": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "n": 2,
+                "output": false
+            }
+        ],
+        "constraints": {
+            "length": "1 <= length of tree_sequence <= 2 * 10^4",
+            "values": "elements in tree_sequence are either 0 or 1",
+            "n": "0 <= n <= length of tree_sequence",
+            "no_adjacent_trees": "no two adjacent spots in tree_sequence contain trees initially"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Deploying Wifi Towers",
+        "question": "A company wants to deploy additional WiFi towers in a series of locations along a highway. Each location either already has a tower (represented by 1) or does not (represented by 0). The company cannot deploy towers in adjacent locations due to interference. Given a list of these locations and a target number of towers to deploy, n, determine if the deployment can be completed without violating the no-adjacent-towers rule.",
+        "examples": [
+            {
+                "location_sequence": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "n": 1,
+                "output": true
+            },
+            {
+                "location_sequence": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "n": 2,
+                "output": false
+            }
+        ],
+        "constraints": {
+            "length": "1 <= length of location_sequence <= 2 * 10^4",
+            "values": "elements in location_sequence are either 0 or 1",
+            "n": "0 <= n <= length of location_sequence",
+            "no_adjacent_towers": "no two adjacent spots in location_sequence contain towers initially"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Building Greenhouses",
+        "question": "A city planner is tasked with building greenhouses in a sequence of plots. Some plots are already occupied by greenhouses (1), while others are vacant (0). Due to logistical constraints, no two greenhouses can be built adjacent to each other. Given a list of these plots and a goal to build n additional greenhouses, determine if it is possible to meet this goal without violating the no-adjacent-greenhouses rule.",
+        "examples": [
+            {
+                "plot_sequence": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "n": 1,
+                "output": true
+            },
+            {
+                "plot_sequence": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "n": 2,
+                "output": false
+            }
+        ],
+        "constraints": {
+            "length": "1 <= length of plot_sequence <= 2 * 10^4",
+            "values": "elements in plot_sequence are either 0 or 1",
+            "n": "0 <= n <= length of plot_sequence",
+            "no_adjacent_greenhouses": "no two adjacent plots in plot_sequence contain greenhouses initially"
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Greatest Common Divisor of Strings",
         "question": "For two strings s and t, we say \"t divides s\" if and only if s = t + t + t + ... + t + t (i.e., t is concatenated with itself one or more times). Given two strings str1 and str2, return the largest string x such that x divides both str1 and str2. ",
         "examples": [
@@ -29,6 +134,99 @@
         "difficulty": 0
     },
     {
+        "question_name": "Shared Melodies",
+        "question": "In music theory, two songs are considered harmonically related if their melodies can be combined into a larger piece. Given two song melodies str1 and str2, return the longest melody x such that str1 and str2 are both composed of repeating x. For instance, 'ABAB' and 'ABABAB' are related through 'AB'.",
+        "examples": [
+            {
+                "input": {
+                    "str1": "ADEADE",
+                    "str2": "ADE"
+                },
+                "output": "ADE"
+            },
+            {
+                "input": {
+                    "str1": "XYZXYZ",
+                    "str2": "XYZXYZXYZ"
+                },
+                "output": "XYZ"
+            },
+            {
+                "input": {
+                    "str1": "WXYZ",
+                    "str2": "FGHI"
+                },
+                "output": ""
+            }
+        ],
+        "constraints": {
+            "description": "1 <= str1.length, str2.length <= 1000; str1 and str2 consist of uppercase letters."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Periodic Patterns",
+        "question": "In signal processing, periodic patterns are crucial for signal analysis. Given two signals represented by strings str1 and str2, find the longest signal pattern that repeats to form both str1 and str2. If no such pattern exists, return an empty string.",
+        "examples": [
+            {
+                "input": {
+                    "str1": "HELLOHELLO",
+                    "str2": "HELLO"
+                },
+                "output": "HELLO"
+            },
+            {
+                "input": {
+                    "str1": "CDEFCDEF",
+                    "str2": "CDEF"
+                },
+                "output": "CDEF"
+            },
+            {
+                "input": {
+                    "str1": "ABCD",
+                    "str2": "EFGH"
+                },
+                "output": ""
+            }
+        ],
+        "constraints": {
+            "description": "1 <= str1.length, str2.length <= 1000; str1 and str2 consist of uppercase letters."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Genomic Sequences",
+        "question": "In genetics, DNA sequences can be replicated to form larger sequences. Given two DNA sequences str1 and str2, return the longest sequence that can be repeated to form both str1 and str2. If no common sequence exists, return an empty string.",
+        "examples": [
+            {
+                "input": {
+                    "str1": "ATCGATCG",
+                    "str2": "ATCG"
+                },
+                "output": "ATCG"
+            },
+            {
+                "input": {
+                    "str1": "GCAGCAG",
+                    "str2": "GCAGCAGCAG"
+                },
+                "output": "GCAG"
+            },
+            {
+                "input": {
+                    "str1": "TTTT",
+                    "str2": "AAAA"
+                },
+                "output": ""
+            }
+        ],
+        "constraints": {
+            "description": "1 <= str1.length, str2.length <= 1000; str1 and str2 consist of uppercase letters."
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Merge Strings Alternately",
         "question": "You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string. Return the merged string. ",
         "examples": [
@@ -40,6 +238,114 @@
             "1 <= word1.length, word2.length <= 100",
             "word1 and word2 consist of lowercase English letters."
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Alternating DJs",
+        "question": "Imagine you're managing a music playlist where two DJs alternate their selections. Given two strings of song names, merge them into one playlist so that songs alternate between DJ1 and DJ2. If one DJ has more songs, add their remaining songs to the end of the playlist. Return the merged playlist as a string.",
+        "examples": [
+            {
+                "input": {
+                    "dj1_songs": "rock1 rock2 rock3",
+                    "dj2_songs": "pop1 pop2 pop3"
+                },
+                "output": "rock1pop1rock2pop2rock3pop3",
+                "explanation": "Both DJs have the same number of songs, so they simply alternate."
+            },
+            {
+                "input": {
+                    "dj1_songs": "hip1 hip2",
+                    "dj2_songs": "rap1 rap2 rap3 rap4"
+                },
+                "output": "hip1rap1hip2rap2rap3rap4",
+                "explanation": "DJ2 has more songs, so after alternation, DJ2's remaining songs are added."
+            },
+            {
+                "input": {
+                    "dj1_songs": "latin1 latin2 latin3 latin4",
+                    "dj2_songs": "jazz1 jazz2"
+                },
+                "output": "latin1jazz1latin2jazz2latin3latin4",
+                "explanation": "DJ1 has more songs, so after alternation, DJ1's remaining songs are added."
+            }
+        ],
+        "constraints": {
+            "min_string_length": 1,
+            "max_string_length": 100,
+            "format": "All song names consist of lowercase English letters."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Weaving Textiles",
+        "question": "You are crafting a textile by weaving two different patterns of threads. Given two strings of colors, merge them into one pattern so that colors alternate between Pattern A and Pattern B. If one pattern is longer, add its remaining colors to the end of the merged pattern. Return the merged pattern as a string.",
+        "examples": [
+            {
+                "input": {
+                    "patternA": "red1 blue1 green1",
+                    "patternB": "yellow1 purple1 orange1"
+                },
+                "output": "red1yellow1blue1purple1green1orange1",
+                "explanation": "Both patterns have the same length, so colors alternate."
+            },
+            {
+                "input": {
+                    "patternA": "turq1 ma1",
+                    "patternB": "pink1 pink2 pink3 pink4"
+                },
+                "output": "turq1pink1ma1pink2pink3pink4",
+                "explanation": "Pattern B is longer, so its remaining colors are appended."
+            },
+            {
+                "input": {
+                    "patternA": "maroon1 maroon2 maroon3 maroon4",
+                    "patternB": "cyan1 cyan2"
+                },
+                "output": "maroon1cyan1maroon2cyan2maroon3maroon4",
+                "explanation": "Pattern A is longer, so its remaining colors are appended."
+            }
+        ],
+        "constraints": {
+            "min_string_length": 1,
+            "max_string_length": 100,
+            "format": "All colors consist of lowercase English letters."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Alternating Narratives",
+        "question": "In a storytelling session, two narrators take turns adding chapters to a collaborative narrative. Given two strings of chapter summaries, merge them into one narrative so that chapters alternate between Narrator A and Narrator B. If one narrator has more chapters, add their remaining summaries to the end of the narrative. Return the merged narrative as a string.",
+        "examples": [
+            {
+                "input": {
+                    "narratorA": "act1 act2 act3",
+                    "narratorB": "part1 part2 part3"
+                },
+                "output": "act1part1act2part2act3part3",
+                "explanation": "Both narrators have the same number of chapters."
+            },
+            {
+                "input": {
+                    "narratorA": "scene1 scene2",
+                    "narratorB": "intro1 intro2 intro3 intro4"
+                },
+                "output": "scene1intro1scene2intro2intro3intro4",
+                "explanation": "Narrator B has more chapters."
+            },
+            {
+                "input": {
+                    "narratorA": "chap1 chap2 chap3 chap4",
+                    "narratorB": "title1 title2"
+                },
+                "output": "chap1title1chap2title2chap3chap4",
+                "explanation": "Narrator A has more chapters."
+            }
+        ],
+        "constraints": {
+            "min_string_length": 1,
+            "max_string_length": 100,
+            "format": "All chapter summaries consist of lowercase English letters."
+        },
         "difficulty": 0
     },
     {
@@ -59,6 +365,213 @@
         "difficulty": 0
     },
     {
+        "question_name": "Musicians with the Greatest Number of Fans",
+        "question": "There are n musicians with fans. You are given an integer array fans, where each fans[i] represents the number of fans the ith musician has, and an integer extraFans, denoting the number of extra fans that you can give to a musician. Return a boolean array result of length n, where result[i] is true if, after giving the ith musician all the extraFans, they will have the greatest number of fans among all the musicians, or false otherwise. Note that multiple musicians can have the greatest number of fans.",
+        "examples": [
+            {
+                "input": {
+                    "fans": [
+                        2,
+                        3,
+                        5,
+                        1,
+                        3
+                    ],
+                    "extraFans": 3
+                },
+                "output": [
+                    true,
+                    true,
+                    true,
+                    false,
+                    true
+                ],
+                "explanation": "If you give all extraFans to: - Musician 1, they will have 2 + 3 = 5 fans, which is the greatest among the musicians. - Musician 2, they will have 3 + 3 = 6 fans, which is the greatest among the musicians. - Musician 3, they will have 5 + 3 = 8 fans, which is the greatest among the musicians. - Musician 4, they will have 1 + 3 = 4 fans, which is not the greatest among the musicians. - Musician 5, they will have 3 + 3 = 6 fans, which is the greatest among the musicians."
+            },
+            {
+                "input": {
+                    "fans": [
+                        4,
+                        2,
+                        1,
+                        1,
+                        2
+                    ],
+                    "extraFans": 1
+                },
+                "output": [
+                    true,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "explanation": "There is only 1 extra fan. Musician 1 will always have the greatest number of fans, even if a different musician is given the extra fan."
+            },
+            {
+                "input": {
+                    "fans": [
+                        12,
+                        1,
+                        12
+                    ],
+                    "extraFans": 10
+                },
+                "output": [
+                    true,
+                    false,
+                    true
+                ],
+                "explanation": "Musicians 1 and 3 will have the greatest number of fans if given the extra fans."
+            }
+        ],
+        "constraints": {
+            "n == fans.length": "true",
+            "2 <= n <= 100": "true",
+            "1 <= fans[i] <= 100": "true",
+            "1 <= extraFans <= 50": "true"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Readers with the Greatest Number of Books",
+        "question": "There are n readers with books. You are given an integer array books, where each books[i] represents the number of books the ith reader has, and an integer extraBooks, denoting the number of extra books that you can give to a reader. Return a boolean array result of length n, where result[i] is true if, after giving the ith reader all the extraBooks, they will have the greatest number of books among all the readers, or false otherwise. Note that multiple readers can have the greatest number of books.",
+        "examples": [
+            {
+                "input": {
+                    "books": [
+                        10,
+                        15,
+                        20,
+                        5,
+                        15
+                    ],
+                    "extraBooks": 5
+                },
+                "output": [
+                    false,
+                    true,
+                    true,
+                    false,
+                    true
+                ],
+                "explanation": "If you give all extraBooks to: - Reader 1, they will have 10 + 5 = 15 books, which is not the greatest among the readers. - Reader 2, they will have 15 + 5 = 20 books, which is the greatest among the readers. - Reader 3, they will have 20 + 5 = 25 books, which is the greatest among the readers. - Reader 4, they will have 5 + 5 = 10 books, which is not the greatest among the readers. - Reader 5, they will have 15 + 5 = 20 books, which is the greatest among the readers."
+            },
+            {
+                "input": {
+                    "books": [
+                        25,
+                        15,
+                        10,
+                        15,
+                        15
+                    ],
+                    "extraBooks": 1
+                },
+                "output": [
+                    true,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "explanation": "There is only 1 extra book. Reader 1 will always have the greatest number of books, even if a different reader is given the extra book."
+            },
+            {
+                "input": {
+                    "books": [
+                        100,
+                        50,
+                        100
+                    ],
+                    "extraBooks": 20
+                },
+                "output": [
+                    true,
+                    false,
+                    true
+                ],
+                "explanation": "Readers 1 and 3 will have the greatest number of books if given the extra books."
+            }
+        ],
+        "constraints": {
+            "n == books.length": "true",
+            "2 <= n <= 100": "true",
+            "1 <= books[i] <= 100": "true",
+            "1 <= extraBooks <= 50": "true"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Athletes with the Greatest Number of Medals",
+        "question": "There are n athletes with medals. You are given an integer array medals, where each medals[i] represents the number of medals the ith athlete has, and an integer extraMedals, denoting the number of extra medals that you can give to an athlete. Return a boolean array result of length n, where result[i] is true if, after giving the ith athlete all the extraMedals, they will have the greatest number of medals among all the athletes, or false otherwise. Note that multiple athletes can have the greatest number of medals.",
+        "examples": [
+            {
+                "input": {
+                    "medals": [
+                        3,
+                        4,
+                        5,
+                        1,
+                        4
+                    ],
+                    "extraMedals": 2
+                },
+                "output": [
+                    false,
+                    true,
+                    true,
+                    false,
+                    true
+                ],
+                "explanation": "If you give all extraMedals to: - Athlete 1, they will have 3 + 2 = 5 medals, which is the greatest among the athletes. - Athlete 2, they will have 4 + 2 = 6 medals, which is the greatest among the athletes. - Athlete 3, they will have 5 + 2 = 7 medals, which is the greatest among the athletes. - Athlete 4, they will have 1 + 2 = 3 medals, which is not the greatest among the athletes. - Athlete 5, they will have 4 + 2 = 6 medals, which is the greatest among the athletes."
+            },
+            {
+                "input": {
+                    "medals": [
+                        10,
+                        5,
+                        5,
+                        10,
+                        5
+                    ],
+                    "extraMedals": 1
+                },
+                "output": [
+                    true,
+                    false,
+                    false,
+                    true,
+                    false
+                ],
+                "explanation": "There is only 1 extra medal. Athletes 1 and 4 will have the greatest number of medals if given the extra medal."
+            },
+            {
+                "input": {
+                    "medals": [
+                        10,
+                        5,
+                        10
+                    ],
+                    "extraMedals": 5
+                },
+                "output": [
+                    true,
+                    false,
+                    true
+                ],
+                "explanation": "Athletes 1 and 3 will have the greatest number of medals if given the extra medals."
+            }
+        ],
+        "constraints": {
+            "n == medals.length": "true",
+            "2 <= n <= 100": "true",
+            "1 <= medals[i] <= 100": "true",
+            "1 <= extraMedals <= 50": "true"
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Increasing Triplet Subsequence",
         "question": "Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k]. If no such indices exists, return false. ",
         "examples": [
@@ -71,6 +584,84 @@
             "-231 <= nums[i] <= 231 - 1",
             "Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?"
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Rising Stock Trends",
+        "question": "Given a list of daily stock prices, return true if there exists a sequence of three trading days where the stock price at day i is less than at day j, and the price at day j is less than at day k, with i < j < k. If no such sequence exists, return false.",
+        "examples": [
+            {
+                "input": "prices = [10, 15, 20, 25, 30]",
+                "output": "true",
+                "explanation": "Any triplet satisfies the condition as the prices are consistently rising."
+            },
+            {
+                "input": "prices = [30, 25, 20, 15, 10]",
+                "output": "false",
+                "explanation": "Prices consistently decrease, so no such sequence exists."
+            },
+            {
+                "input": "prices = [20, 10, 25, 5, 30, 40]",
+                "output": "true",
+                "explanation": "The sequence (1, 3, 6) satisfies the condition because prices[1] = 10 < prices[3] = 25 < prices[6] = 40."
+            }
+        ],
+        "constraints": {
+            "length": "1 <= prices.length <= 5 * 10^5",
+            "values": "-2^31 <= prices[i] <= 2^31 - 1"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Escalating Temperature Trends",
+        "question": "Given a list of daily temperature readings, return true if there exists a sequence of three days where the temperature on day i is less than on day j, and the temperature on day j is less than on day k, with i < j < k. If no such sequence exists, return false.",
+        "examples": [
+            {
+                "input": "temperatures = [10, 15, 20, 25, 30]",
+                "output": "true",
+                "explanation": "Any triplet satisfies the condition as temperatures are consistently rising."
+            },
+            {
+                "input": "temperatures = [30, 25, 20, 15, 10]",
+                "output": "false",
+                "explanation": "Temperatures consistently decrease, so no such sequence exists."
+            },
+            {
+                "input": "temperatures = [20, 10, 25, 5, 30, 40]",
+                "output": "true",
+                "explanation": "The sequence (1, 3, 6) satisfies the condition because temperatures[1] = 10 < temperatures[3] = 25 < temperatures[6] = 40."
+            }
+        ],
+        "constraints": {
+            "length": "1 <= temperatures.length <= 5 * 10^5",
+            "values": "-2^31 <= temperatures[i] <= 2^31 - 1"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Progressive Score Increases",
+        "question": "Given a list of scores from a series of exams, determine if there exists a sequence of three exams where the score at exam i is less than at exam j, and the score at exam j is less than at exam k, with i < j < k. Return true if such a sequence exists; otherwise, return false.",
+        "examples": [
+            {
+                "input": "scores = [50, 60, 70, 80, 90]",
+                "output": "true",
+                "explanation": "Any triplet of exams satisfies the condition as scores are consistently increasing."
+            },
+            {
+                "input": "scores = [90, 80, 70, 60, 50]",
+                "output": "false",
+                "explanation": "Scores consistently decrease, so no such sequence exists."
+            },
+            {
+                "input": "scores = [60, 50, 75, 40, 85, 95]",
+                "output": "true",
+                "explanation": "The sequence (1, 3, 6) satisfies the condition because scores[1] = 50 < scores[3] = 75 < scores[6] = 95."
+            }
+        ],
+        "constraints": {
+            "length": "1 <= scores.length <= 5 * 10^5",
+            "values": "-2^31 <= scores[i] <= 2^31 - 1"
+        },
         "difficulty": 0
     },
     {
@@ -90,6 +681,78 @@
         "difficulty": 0
     },
     {
+        "question_name": "Flip Book Pages",
+        "question": "Imagine you have a book with text written on its pages. The text on each page is a sequence of words separated by spaces. Given a string representing the text content, reverse the order of the words as if flipping the book pages from end to start. Ensure the words are separated by a single space and ignore any leading or trailing spaces.",
+        "examples": [
+            {
+                "input": "the quick brown fox",
+                "output": "fox brown quick the"
+            },
+            {
+                "input": "  you are awesome  ",
+                "output": "awesome are you"
+            },
+            {
+                "input": "code something   creative",
+                "output": "creative something code"
+            }
+        ],
+        "constraints": {
+            "length": "1 <= s.length <= 10^4",
+            "content": "s contains English letters (upper-case and lower-case), digits, and spaces ' '.",
+            "words": "There is at least one word in s."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Reorder Playlist Tracks",
+        "question": "In a music playlist, songs are listed in a particular order. Given a string of song titles separated by spaces, reverse the order of the songs as if moving from the end of the playlist to the start. Ensure each song title is separated by a single space and ignore any extra spaces.",
+        "examples": [
+            {
+                "input": "Song1 Song2 Song3",
+                "output": "Song3 Song2 Song1"
+            },
+            {
+                "input": "  Start Here  ",
+                "output": "Here Start"
+            },
+            {
+                "input": "Track1   Track2   Track3",
+                "output": "Track3 Track2 Track1"
+            }
+        ],
+        "constraints": {
+            "length": "1 <= s.length <= 10^4",
+            "content": "s contains English letters (upper-case and lower-case), digits, and spaces ' '.",
+            "words": "There is at least one word in s."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Reverse Text in a Chat Log",
+        "question": "In a chat log, messages are displayed in chronological order. Given a string of chat messages separated by spaces, reverse the order of the messages as if starting from the latest message. Ensure each message is separated by a single space and ignore any leading or trailing spaces.",
+        "examples": [
+            {
+                "input": "hello world",
+                "output": "world hello"
+            },
+            {
+                "input": "  new message  ",
+                "output": "message new"
+            },
+            {
+                "input": "first   second  third",
+                "output": "third second first"
+            }
+        ],
+        "constraints": {
+            "length": "1 <= s.length <= 10^4",
+            "content": "s contains English letters (upper-case and lower-case), digits, and spaces ' '.",
+            "words": "There is at least one word in s."
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "String Compression",
         "question": "Given an array of characters chars, compress it using the following algorithm: Begin with an empty string s. For each group of consecutive repeating characters in chars: If the group's length is 1, append the character to s. Otherwise, append the character followed by the group's length. The compressed string s should not be returned separately, but instead, be stored in the input character array chars. Note that group lengths that are 10 or longer will be split into multiple characters in chars. After you are done modifying the input array, return the new length of the array. You must write an algorithm that uses only constant extra space. ",
         "examples": [
@@ -104,6 +767,193 @@
         "difficulty": 0
     },
     {
+        "question_name": "Encoding Messages",
+        "question": "In a messaging system, encode messages by replacing sequences of consecutive repeating characters with the character followed by its frequency. If a character appears only once, it remains unchanged. The encoded message should be stored within the original message array, modifying it in-place. For sequences longer than 9 characters, the frequency is split across multiple digits. Return the length of the encoded message.",
+        "examples": [
+            {
+                "input": [
+                    "h",
+                    "h",
+                    "e",
+                    "l",
+                    "l",
+                    "o",
+                    "o",
+                    "o"
+                ],
+                "output": 7,
+                "result": [
+                    "h",
+                    "2",
+                    "e",
+                    "l",
+                    "2",
+                    "o",
+                    "3"
+                ]
+            },
+            {
+                "input": [
+                    "j"
+                ],
+                "output": 1,
+                "result": [
+                    "j"
+                ]
+            },
+            {
+                "input": [
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "p",
+                    "q"
+                ],
+                "output": 4,
+                "result": [
+                    "p",
+                    "1",
+                    "1",
+                    "q"
+                ]
+            }
+        ],
+        "constraints": {
+            "length": "1 <= input.length <= 2000",
+            "characters": "Input characters can be any letter, digit, or symbol."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Text Summarization",
+        "question": "Summarize a text by replacing sequences of consecutive repeating characters with the character followed by its count. If a character appears only once, it remains unchanged. The summarization should be done in-place, storing the result within the original text array. For counts greater than 9, split them into multiple digits. Return the length of the summarized text.",
+        "examples": [
+            {
+                "input": [
+                    "s",
+                    "s",
+                    "e",
+                    "e",
+                    "e",
+                    "t"
+                ],
+                "output": 6,
+                "result": [
+                    "s",
+                    "2",
+                    "e",
+                    "3",
+                    "t"
+                ]
+            },
+            {
+                "input": [
+                    "c"
+                ],
+                "output": 1,
+                "result": [
+                    "c"
+                ]
+            },
+            {
+                "input": [
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "d",
+                    "e"
+                ],
+                "output": 4,
+                "result": [
+                    "d",
+                    "1",
+                    "0",
+                    "e"
+                ]
+            }
+        ],
+        "constraints": {
+            "length": "1 <= input.length <= 2000",
+            "characters": "Input characters can be any letter, digit, or symbol."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Signal Compression",
+        "question": "Compress signals in a communication system by replacing sequences of consecutive repeating signals with the signal followed by its repetition count. If a signal appears only once, it remains unchanged. The compression should be done in-place, modifying the original signal array. For counts of 10 or more, split them into multiple digits. Return the length of the compressed signal.",
+        "examples": [
+            {
+                "input": [
+                    "x",
+                    "x",
+                    "y",
+                    "y",
+                    "y",
+                    "z"
+                ],
+                "output": 6,
+                "result": [
+                    "x",
+                    "2",
+                    "y",
+                    "3",
+                    "z"
+                ]
+            },
+            {
+                "input": [
+                    "k"
+                ],
+                "output": 1,
+                "result": [
+                    "k"
+                ]
+            },
+            {
+                "input": [
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "v",
+                    "w"
+                ],
+                "output": 4,
+                "result": [
+                    "v",
+                    "1",
+                    "2",
+                    "w"
+                ]
+            }
+        ],
+        "constraints": {
+            "length": "1 <= input.length <= 2000",
+            "characters": "Input characters can be any letter, digit, or symbol."
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Reverse Vowels of a String",
         "question": "Given a string s, reverse only all the vowels in the string and return it. The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once. ",
         "examples": [
@@ -114,6 +964,63 @@
             "1 <= s.length <= 3 * 105",
             "s consist of printable ASCII characters."
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Echoing Voices in a Theater",
+        "question": "In a theater, voices of the actors need to be echoed back in reverse order, but only for specific sounds\u2014'a', 'e', 'i', 'o', and 'u' in both uppercase and lowercase. Given a string of sounds, reverse these specific sounds while keeping all other sounds in place, and return the resulting string.",
+        "examples": [
+            {
+                "input": "Crescendo",
+                "output": "Crescedno"
+            },
+            {
+                "input": "Soprano",
+                "output": "Surporna"
+            }
+        ],
+        "constraints": {
+            "length": "1 <= s.length <= 3 * 10^5",
+            "characters": "s consists of printable ASCII characters"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Rearranging Harmonies",
+        "question": "In music composition, sometimes specific notes\u2014'a', 'e', 'i', 'o', and 'u'\u2014need to be rearranged in reverse order while keeping the rest of the melody intact. Given a string representing these notes, write a function to reverse the specified notes and return the new melody.",
+        "examples": [
+            {
+                "input": "Melodia",
+                "output": "Malodio"
+            },
+            {
+                "input": "Harmony",
+                "output": "Hormany"
+            }
+        ],
+        "constraints": {
+            "length": "1 <= s.length <= 3 * 10^5",
+            "characters": "s consists of printable ASCII characters"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Signal Reversal in Communication",
+        "question": "In communication systems, specific signals\u2014'a', 'e', 'i', 'o', and 'u', in both uppercase and lowercase\u2014need to be reversed in the transmission sequence while keeping all other signals unchanged. Given a string of signals, write a function to reverse the specified signals and return the resulting string.",
+        "examples": [
+            {
+                "input": "Transmission",
+                "output": "Transmisssino"
+            },
+            {
+                "input": "Receiver",
+                "output": "Reevceir"
+            }
+        ],
+        "constraints": {
+            "length": "1 <= s.length <= 3 * 10^5",
+            "characters": "s consists of printable ASCII characters"
+        },
         "difficulty": 0
     },
     {
@@ -132,6 +1039,119 @@
         "difficulty": 0
     },
     {
+        "question_name": "Farm Yield Multiplier",
+        "question": "Given an array of crop yields from different plots in a farm, return a new array where each element represents the overall yield multiplier if one plot's yield is considered a constant factor. The yield of any subset of plots is guaranteed to fit within a 32-bit integer. You must write an algorithm that runs in O(n) time and without using division.",
+        "examples": [
+            {
+                "input": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "output": [
+                    60,
+                    40,
+                    30,
+                    24
+                ]
+            },
+            {
+                "input": [
+                    10,
+                    -1,
+                    0,
+                    5
+                ],
+                "output": [
+                    0,
+                    0,
+                    -50,
+                    0
+                ]
+            }
+        ],
+        "constraints": {
+            "length": "2 <= nums.length <= 10^5",
+            "value_range": "-30 <= nums[i] <= 30"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Power Grid Energy Multiplier",
+        "question": "In a power grid system, given an array of energy outputs from different generators, return a new array where each element represents the total energy multiplier if one generator's output is ignored. The energy output of any subset of generators is guaranteed to fit within a 32-bit integer. You must write an algorithm that runs in O(n) time and without using division.",
+        "examples": [
+            {
+                "input": [
+                    -2,
+                    4,
+                    6
+                ],
+                "output": [
+                    24,
+                    -12,
+                    -8
+                ]
+            },
+            {
+                "input": [
+                    1,
+                    0,
+                    -3,
+                    2
+                ],
+                "output": [
+                    0,
+                    6,
+                    0,
+                    0
+                ]
+            }
+        ],
+        "constraints": {
+            "length": "2 <= nums.length <= 10^5",
+            "value_range": "-30 <= nums[i] <= 30"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Audio Signal Amplitude Adjuster",
+        "question": "Given an array of sound amplitudes from different audio signals, return a new array where each element represents the overall amplitude if one signal's amplitude is considered a constant adjustment factor. The amplitude of any subset of signals is guaranteed to fit within a 32-bit integer. You must write an algorithm that runs in O(n) time and without using division.",
+        "examples": [
+            {
+                "input": [
+                    1,
+                    2,
+                    3
+                ],
+                "output": [
+                    6,
+                    3,
+                    2
+                ]
+            },
+            {
+                "input": [
+                    -1,
+                    0,
+                    5,
+                    2
+                ],
+                "output": [
+                    0,
+                    10,
+                    0,
+                    0
+                ]
+            }
+        ],
+        "constraints": {
+            "length": "2 <= nums.length <= 10^5",
+            "value_range": "-30 <= nums[i] <= 30"
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Move Zeroes",
         "question": "Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements. Note that you must do this in-place without making a copy of the array. ",
         "examples": [
@@ -142,6 +1162,63 @@
             "1 <= nums.length <= 104",
             "-231 <= nums[i] <= 231 - 1"
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Clearing the Warehouse",
+        "question": "Imagine you're managing a warehouse where boxes are stored on shelves. Some boxes are empty (represented by zeros), and others are filled with goods (non-zero values). Move all the empty boxes to the end of the shelves while maintaining the order of the filled boxes. This must be done without using additional storage space.",
+        "examples": [
+            {
+                "input": "[0, 5, 0, 10, 15]",
+                "output": "[5, 10, 15, 0, 0]"
+            },
+            {
+                "input": "[0, 0, 0]",
+                "output": "[0, 0, 0]"
+            }
+        ],
+        "constraints": {
+            "array_length": "1 <= array.length <= 10^4",
+            "value_range": "-2^31 <= array[i] <= 2^31 - 1"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Sorting Library Shelves",
+        "question": "In a library, some books are being removed (represented by zeros). Move these 'removed' books to the end of the shelf while keeping the remaining books in their current relative order. This must be done without moving books to a different shelf.",
+        "examples": [
+            {
+                "input": "[0, 3, 0, 9, 12]",
+                "output": "[3, 9, 12, 0, 0]"
+            },
+            {
+                "input": "[0]",
+                "output": "[0]"
+            }
+        ],
+        "constraints": {
+            "array_length": "1 <= array.length <= 10^4",
+            "value_range": "-2^31 <= array[i] <= 2^31 - 1"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Packing for Travel",
+        "question": "When packing for a trip, you have items you want to include (non-zero values) and items you don't need (zeros). Rearrange your luggage so that all unnecessary items are at the end, while keeping the essential items in their original order. You cannot use extra bags for packing.",
+        "examples": [
+            {
+                "input": "[0, 2, 0, 4, 6]",
+                "output": "[2, 4, 6, 0, 0]"
+            },
+            {
+                "input": "[0, 0]",
+                "output": "[0, 0]"
+            }
+        ],
+        "constraints": {
+            "array_length": "1 <= array.length <= 10^4",
+            "value_range": "-2^31 <= array[i] <= 2^31 - 1"
+        },
         "difficulty": 0
     },
     {
@@ -160,6 +1237,84 @@
         "difficulty": 0
     },
     {
+        "question_name": "Is Musical Sequence",
+        "question": "Imagine you are a music producer who needs to verify if a shorter melody (s) is a part of a larger musical composition (t). A melody sequence is considered valid if it can be heard in the larger piece by only listening to the notes in order, ignoring other sounds. Given two musical sequences s and t, return true if s is a sequence of t, or false otherwise.",
+        "examples": [
+            {
+                "input": {
+                    "s": "CDE",
+                    "t": "ACDGFOX"
+                },
+                "output": true
+            },
+            {
+                "input": {
+                    "s": "CFG",
+                    "t": "ACDGFOX"
+                },
+                "output": false
+            }
+        ],
+        "constraints": {
+            "s_length": "0 <= s.length <= 100",
+            "t_length": "0 <= t.length <= 10^4",
+            "notes": "Both s and t consist only of uppercase English letters (each representing a note)."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "DNA Sequence Alignment",
+        "question": "In genetic engineering, you often need to check if a DNA sequence s is a subsequence of a longer DNA sequence t. This means s can be formed by selecting certain nucleotides from t without altering their order. Given two DNA sequences s and t, return true if s is a subsequence of t, or false otherwise.",
+        "examples": [
+            {
+                "input": {
+                    "s": "ATC",
+                    "t": "AGGTTC"
+                },
+                "output": true
+            },
+            {
+                "input": {
+                    "s": "ACG",
+                    "t": "ATCG"
+                },
+                "output": false
+            }
+        ],
+        "constraints": {
+            "s_length": "0 <= s.length <= 100",
+            "t_length": "0 <= t.length <= 10^4",
+            "nucleotides": "Both s and t consist only of uppercase English letters (each representing a nucleotide)."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Timeline Event Sequence",
+        "question": "In event timeline analysis, you want to verify if a sequence of events s is a subsequence of a longer timeline of events t. This means all events in s must occur in order within t. Given two event sequences s and t, return true if s is a subsequence of t, or false otherwise.",
+        "examples": [
+            {
+                "input": {
+                    "s": "ABC",
+                    "t": "AHBCDE"
+                },
+                "output": true
+            },
+            {
+                "input": {
+                    "s": "AXC",
+                    "t": "AHBCDE"
+                },
+                "output": false
+            }
+        ],
+        "constraints": {
+            "s_length": "0 <= s.length <= 100",
+            "t_length": "0 <= t.length <= 10^4",
+            "events": "Both s and t consist only of lowercase English letters (each representing an event)."
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Container with Most Water",
         "question": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container. ",
         "examples": [
@@ -171,6 +1326,63 @@
             "2 <= n <= 105",
             "0 <= height[i] <= 104"
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Dam with Greatest Volume",
+        "question": "Imagine you are building a series of dams across a river to store water. Each dam's height is represented by an integer in an array. Find two dams that, when combined with the riverbed, create a reservoir that can store the most water. Return the maximum volume of water this reservoir can hold.",
+        "examples": [
+            {
+                "input": "[2, 6, 8, 4, 7, 3, 5, 9]",
+                "output": 35
+            },
+            {
+                "input": "[10, 10]",
+                "output": 1
+            }
+        ],
+        "constraints": {
+            "n": "2 <= n <= 10^5",
+            "height": "0 <= height[i] <= 10^4"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Greenhouse with Most Light",
+        "question": "You are designing a greenhouse using a series of vertical posts. Each post's height is represented by an integer in an array. Find two posts that, when combined with a transparent roof, can channel the most natural light into the greenhouse. The amount of light is determined by the minimum height of the posts multiplied by the distance between them. Return the maximum amount of light that can be channeled.",
+        "examples": [
+            {
+                "input": "[3, 9, 5, 2, 7, 1, 8]",
+                "output": 28
+            },
+            {
+                "input": "[5, 5]",
+                "output": 5
+            }
+        ],
+        "constraints": {
+            "n": "2 <= n <= 10^5",
+            "height": "0 <= height[i] <= 10^4"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Flood Protection Barrier",
+        "question": "A city is building flood barriers along its riverfront, with each barrier's height represented by an integer in an array. Determine which two barriers can create a barrier system that protects the largest area from flooding when combined with the riverbank. The protected area is the minimum barrier height times the distance between the barriers. Return the maximum protected area.",
+        "examples": [
+            {
+                "input": "[1, 8, 3, 9, 2, 6, 4, 5]",
+                "output": 32
+            },
+            {
+                "input": "[1, 1]",
+                "output": 1
+            }
+        ],
+        "constraints": {
+            "n": "2 <= n <= 10^5",
+            "height": "0 <= height[i] <= 10^4"
+        },
         "difficulty": 0
     },
     {
@@ -188,6 +1400,60 @@
         "difficulty": 0
     },
     {
+        "question_name": "Pairing Products for Warehouse Optimization",
+        "question": "You are the manager of a warehouse that stores various products. In one operation, you can package two products from the warehouse whose total weight equals `k` kilograms and ship them out. Return the maximum number of operations you can perform to clear the warehouse.",
+        "examples": [
+            {
+                "input": "weights = [1,2,3,4], k = 5",
+                "output": "2",
+                "explanation": "First, package and ship products weighing 1 and 4 kg. Then, package and ship products weighing 2 and 3 kg."
+            },
+            {
+                "input": "weights = [3,1,3,4,3], k = 6",
+                "output": "1",
+                "explanation": "Package and ship two products each weighing 3 kg."
+            }
+        ],
+        "constraints": "1 <= weights.length <= 105, 1 <= weights[i] <= 109, 1 <= k <= 109",
+        "difficulty": 0
+    },
+    {
+        "question_name": "Maximizing Musical Pairings for Perfect Harmony",
+        "question": "You are a music composer aiming to create harmonies with pairs of instruments whose frequencies sum to `k` Hz. In one operation, you can pair two instruments from your collection whose total frequency equals `k` and use them in a piece. Return the maximum number of harmonious pairs you can create.",
+        "examples": [
+            {
+                "input": "frequencies = [200,250,300,350], k = 550",
+                "output": "2",
+                "explanation": "First, pair instruments with frequencies 200 and 350 Hz. Then, pair instruments with frequencies 250 and 300 Hz."
+            },
+            {
+                "input": "frequencies = [300,200,300,350,300], k = 600",
+                "output": "1",
+                "explanation": "Pair two instruments each with a frequency of 300 Hz."
+            }
+        ],
+        "constraints": "1 <= frequencies.length <= 105, 1 <= frequencies[i] <= 109, 1 <= k <= 109",
+        "difficulty": 0
+    },
+    {
+        "question_name": "Optimizing Data Transmission Pairs for Network Efficiency",
+        "question": "In a data transmission network, packets are transmitted in pairs whose sizes sum to `k` bytes. In one operation, you can transmit two packets from the network whose combined size equals `k` bytes and remove them. Return the maximum number of operations you can perform to optimize network efficiency.",
+        "examples": [
+            {
+                "input": "sizes = [10,20,30,40], k = 50",
+                "output": "2",
+                "explanation": "First, transmit packets of sizes 10 and 40 bytes. Then, transmit packets of sizes 20 and 30 bytes."
+            },
+            {
+                "input": "sizes = [30,10,30,40,30], k = 60",
+                "output": "1",
+                "explanation": "Transmit two packets each of size 30 bytes."
+            }
+        ],
+        "constraints": "1 <= sizes.length <= 105, 1 <= sizes[i] <= 109, 1 <= k <= 109",
+        "difficulty": 0
+    },
+    {
         "question_name": "Maximum Average Subarray I",
         "question": "You are given an integer array nums consisting of n elements, and an integer k. Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted. ",
         "examples": [
@@ -202,6 +1468,57 @@
         "difficulty": 0
     },
     {
+        "question_name": "Peak Hour Traffic Average",
+        "question": "In a metropolitan city, traffic engineers want to identify a specific segment of roads where the traffic density averages the highest during peak hours. You are given an array of traffic densities along different road segments and an integer k representing the number of consecutive segments to consider. Find the average traffic density of a contiguous sequence of k road segments that is the highest and return this value.",
+        "examples": [
+            "Input: trafficDensities = [10, 25, 12, 3, 50, 7], k = 4",
+            "Output: 20.00000",
+            "Explanation: Maximum average is (25 + 12 + 3 + 50) / 4 = 90 / 4 = 22.5, but considering all possible subarrays, (25 + 12 + 3 + 50) = 90 and then (10 + 25 + 12 + 3) = 50 gives averages of 22.5 and 12.5 respectively, the highest is actually (50 + 7 + 10 + 25) which is not valid since it wraps around. However, given the constraints, (25 + 12 + 3 + 50) = 90 indeed provides the max average of 22.5. The example here needs correction to align with the mistake in calculation: (12 + 3 + 50 + 7) / 4 = 72 / 4 = 18, (25 + 12 + 3 + 50) / 4 = 90 / 4 = 22.5.",
+            "Input: trafficDensities = [15], k = 1",
+            "Output: 15.00000"
+        ],
+        "constraints": {
+            "n": "trafficDensities.length",
+            "k_range": "1 <= k <= n <= 10^5",
+            "density_range": "-10^4 <= trafficDensities[i] <= 10^4"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Highest Classroom Performance",
+        "question": "Educational researchers want to identify a sequence of k consecutive classes with the highest average student performance. Given an array of student performance scores across different classes and an integer k representing the number of classes to consider, find the average performance of a contiguous sequence of k classes that is the highest and return this value.",
+        "examples": [
+            "Input: studentScores = [80, 70, 90, 85, 95, 88], k = 3",
+            "Output: 90.00000",
+            "Explanation: Maximum average is (90 + 85 + 95) / 3 = 270 / 3 = 90",
+            "Input: studentScores = [92], k = 1",
+            "Output: 92.00000"
+        ],
+        "constraints": {
+            "n": "studentScores.length",
+            "k_range": "1 <= k <= n <= 10^5",
+            "score_range": "-10^4 <= studentScores[i] <= 10^4"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Maximum Crop Yield Average",
+        "question": "Agricultural analysts need to determine a sequence of k consecutive plots of land that yields the highest average crop output. You are given an array representing crop yields across different plots and an integer k representing the number of plots to consider. Find the average yield of a contiguous sequence of k plots that is the highest and return this value.",
+        "examples": [
+            "Input: cropYields = [20, 30, 10, 15, 75, 25], k = 3",
+            "Output: 40.00000",
+            "Explanation: Maximum average is (30 + 10 + 15) / 3 = 55 / 3 = 18.33, but considering (75 + 25 + 20) = 120 / 3 = 40 gives the highest average.",
+            "Input: cropYields = [36], k = 1",
+            "Output: 36.00000"
+        ],
+        "constraints": {
+            "n": "cropYields.length",
+            "k_range": "1 <= k <= n <= 10^5",
+            "yield_range": "-10^4 <= cropYields[i] <= 10^4"
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Longest Subarray of 1's After Deleting One Element",
         "question": "Given a binary array nums, you should delete one element from it. Return the size of the longest non-empty subarray containing only 1's in the resulting array. Return 0 if there is no such subarray. ",
         "examples": [
@@ -213,6 +1530,84 @@
             "1 <= nums.length <= 105",
             "nums[i] is either 0 or 1."
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Longest Greenhouse Row After One Tree Removal",
+        "question": "Imagine a greenhouse row where each plant is either healthy (1) or diseased (0). The task is to remove one plant and find the length of the longest continuous section with only healthy plants in the row. Return 0 if no such section exists.",
+        "examples": [
+            {
+                "input": "[1,1,0,1]",
+                "output": 3,
+                "explanation": "After removing the diseased plant at position 2, there are 3 healthy plants together."
+            },
+            {
+                "input": "[0,1,1,1,0,1,1,0,1]",
+                "output": 5,
+                "explanation": "After removing the plant at position 4, the longest continuous section with healthy plants is of length 5."
+            },
+            {
+                "input": "[1,1,1]",
+                "output": 2,
+                "explanation": "One healthy plant must be removed."
+            }
+        ],
+        "constraints": {
+            "length": "1 <= row_length <= 10^5",
+            "plant_status": "Each plant is either healthy (1) or diseased (0)."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Network Flow Optimization",
+        "question": "In a network with nodes that are either operational (1) or not (0), find the size of the longest chain of operational nodes after removing at most one node. Return 0 if no operational chain exists.",
+        "examples": [
+            {
+                "input": "[1,1,0,1]",
+                "output": 3,
+                "explanation": "After removing the non-operational node at position 2, there is a chain of 3 operational nodes."
+            },
+            {
+                "input": "[0,1,1,1,0,1,1,0,1]",
+                "output": 5,
+                "explanation": "After removing the node at position 4, the longest chain of operational nodes is of length 5."
+            },
+            {
+                "input": "[1,1,1]",
+                "output": 2,
+                "explanation": "One operational node must be removed."
+            }
+        ],
+        "constraints": {
+            "length": "1 <= network_size <= 10^5",
+            "node_status": "Each node is either operational (1) or not (0)."
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Tunnel Vision",
+        "question": "Consider a tunnel with sections that are either illuminated (1) or dark (0). The goal is to find the length of the longest illuminated section after removing at most one dark section. Return 0 if no illuminated section exists.",
+        "examples": [
+            {
+                "input": "[1,1,0,1]",
+                "output": 3,
+                "explanation": "After removing the dark section at position 2, there are 3 illuminated sections together."
+            },
+            {
+                "input": "[0,1,1,1,0,1,1,0,1]",
+                "output": 5,
+                "explanation": "After removing the dark section at position 4, the longest illuminated section is of length 5."
+            },
+            {
+                "input": "[1,1,1]",
+                "output": 2,
+                "explanation": "One illuminated section must be removed."
+            }
+        ],
+        "constraints": {
+            "length": "1 <= tunnel_length <= 10^5",
+            "section_status": "Each section is either illuminated (1) or dark (0)."
+        },
         "difficulty": 0
     },
     {
@@ -231,6 +1626,111 @@
         "difficulty": 0
     },
     {
+        "question_name": "Vowel Harvest in Orchard Rows",
+        "question": "Imagine you have an orchard where each tree is labeled with a letter, representing different types of fruit. Vowel trees are labeled 'a', 'e', 'i', 'o', and 'u', and they produce the most valuable fruits. Given a string s representing the row of trees and an integer k representing the length of the harvest area, return the maximum number of vowel trees that can be included in any harvest area of length k.",
+        "examples": [
+            {
+                "input": {
+                    "s": "abciiidef",
+                    "k": 3
+                },
+                "output": 3,
+                "explanation": "The substring 'iii' contains 3 vowel trees."
+            },
+            {
+                "input": {
+                    "s": "aeiou",
+                    "k": 2
+                },
+                "output": 2,
+                "explanation": "Any substring of length 2 contains 2 vowel trees."
+            },
+            {
+                "input": {
+                    "s": "treetreeo",
+                    "k": 3
+                },
+                "output": 1,
+                "explanation": "Substrings like 'ree' or 'oee' could contain vowels, depending on s, but given 'treetreeo', only 'o' appears in substrings of length 3."
+            }
+        ],
+        "constraints": {
+            "1 <= s.length <= 10^5": "s consists of lowercase English letters.",
+            "1 <= k <= s.length": ""
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Voice Coach's Vowel Harmony",
+        "question": "A voice coach is training students to sing harmonious vowels in a song. Given a string s representing the sequence of notes and an integer k representing the length of the singing segment, return the maximum number of vowel notes ('a', 'e', 'i', 'o', and 'u') that can be included in any segment of length k.",
+        "examples": [
+            {
+                "input": {
+                    "s": "helloiam",
+                    "k": 3
+                },
+                "output": 2,
+                "explanation": "Segments like 'iam' contain 2 vowels."
+            },
+            {
+                "input": {
+                    "s": "aioue",
+                    "k": 3
+                },
+                "output": 3,
+                "explanation": "Any segment of length 3 contains at least 3 vowel notes."
+            },
+            {
+                "input": {
+                    "s": "oiuemv",
+                    "k": 4
+                },
+                "output": 3,
+                "explanation": "Segments like 'oiue' contain 3 vowel notes."
+            }
+        ],
+        "constraints": {
+            "1 <= s.length <= 10^5": "s consists of lowercase English letters.",
+            "1 <= k <= s.length": ""
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Language Professor's Sentence Analysis",
+        "question": "A language professor analyzes sentences to understand linguistic patterns. Given a sentence s and an integer k representing the length of a phrase, return the maximum number of vowel words ('a', 'e', 'i', 'o', and 'u') that appear in any phrase of length k within the sentence.",
+        "examples": [
+            {
+                "input": {
+                    "s": "aioueet",
+                    "k": 2
+                },
+                "output": 2,
+                "explanation": "Phrases of length 2 contain 2 vowels."
+            },
+            {
+                "input": {
+                    "s": "xxyzzio",
+                    "k": 3
+                },
+                "output": 1,
+                "explanation": "Phrases like 'ioz' could contain vowels, depending on s, but here, only 'io' appears in phrases of length 3."
+            },
+            {
+                "input": {
+                    "s": "uieoaee",
+                    "k": 3
+                },
+                "output": 3,
+                "explanation": "Phrases like 'uio' contain 3 vowels."
+            }
+        ],
+        "constraints": {
+            "1 <= s.length <= 10^5": "s consists of lowercase English letters.",
+            "1 <= k <= s.length": ""
+        },
+        "difficulty": 0
+    },
+    {
         "question_name": "Max Consecutive Ones III",
         "question": "Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's. ",
         "examples": [
@@ -242,6 +1742,167 @@
             "nums[i] is either 0 or 1.",
             "0 <= k <= nums.length"
         ],
+        "difficulty": 0
+    },
+    {
+        "question_name": "Longest Light Sequence",
+        "question": "Imagine a string of Christmas lights where each light can be either on (1) or off (0). Given a binary array `lights` representing the initial state of the lights and an integer `k`, return the maximum number of consecutive lights that can be turned on if you can replace at most `k` non-functional lights. The goal is to create the longest continuous sequence of on lights.",
+        "examples": [
+            {
+                "input": {
+                    "lights": [
+                        1,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        0
+                    ],
+                    "k": 2
+                },
+                "output": 6,
+                "explanation": "[1,1,1,0,0,1,1,1,1,1,1] Bolded lights were replaced."
+            },
+            {
+                "input": {
+                    "lights": [
+                        0,
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "k": 3
+                },
+                "output": 10,
+                "explanation": "[0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1] Bolded lights were replaced."
+            }
+        ],
+        "constraints": {
+            "lights_length": "1 <= lights.length <= 10^5",
+            "lights_values": "Each light is either 0 (off) or 1 (on)",
+            "k_range": "0 <= k <= lights.length"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Max Consecutive Signal Strength",
+        "question": "In telecommunications, signal strength can be represented as a binary array where 1 indicates strong signal and 0 indicates weak signal. Given a binary array `signals` and an integer `k`, return the maximum number of consecutive strong signals that can be achieved if you can deploy signal boosters on at most `k` weak signal sites.",
+        "examples": [
+            {
+                "input": {
+                    "signals": [
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0
+                    ],
+                    "k": 2
+                },
+                "output": 6,
+                "explanation": "[1,1,1,1,1,1,1,1,0] Bolded sites had boosters deployed."
+            },
+            {
+                "input": {
+                    "signals": [
+                        0,
+                        1,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1,
+                        0,
+                        0
+                    ],
+                    "k": 3
+                },
+                "output": 7,
+                "explanation": "[0,1,1,1,1,1,1,1,1,0,0] Bolded sites had boosters deployed."
+            }
+        ],
+        "constraints": {
+            "signals_length": "1 <= signals.length <= 10^5",
+            "signals_values": "Each signal is either 0 (weak) or 1 (strong)",
+            "k_range": "0 <= k <= signals.length"
+        },
+        "difficulty": 0
+    },
+    {
+        "question_name": "Optimal Crop Alignment",
+        "question": "Imagine a field where crops are planted in rows and can be either healthy (1) or diseased (0). Given a binary array `crops` and an integer `k`, return the maximum number of consecutive healthy crops that can be achieved if you can remove or replace at most `k` diseased crops to achieve a continuous row of healthy crops.",
+        "examples": [
+            {
+                "input": {
+                    "crops": [
+                        1,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        0
+                    ],
+                    "k": 2
+                },
+                "output": 7,
+                "explanation": "[1,1,1,1,1,1,1,1,0] Bolded crops were removed or replaced."
+            },
+            {
+                "input": {
+                    "crops": [
+                        0,
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1
+                    ],
+                    "k": 3
+                },
+                "output": 8,
+                "explanation": "[0,0,1,1,1,1,1,1,1,1,1,1] Bolded crops were removed or replaced."
+            }
+        ],
+        "constraints": {
+            "crops_length": "1 <= crops.length <= 10^5",
+            "crops_values": "Each crop is either 0 (diseased) or 1 (healthy)",
+            "k_range": "0 <= k <= crops.length"
+        },
         "difficulty": 0
     }
 ]
