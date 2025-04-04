@@ -11,9 +11,13 @@ class A2C_Agent:
     def __init__(self, state_size, action_size, learning_rate=0.001):
         self.state_size = state_size
         self.action_size = action_size
-
+  
         self.actor, self.critic = self.build_model()
-        self.optimizer = Adam(learning_rate)
+        self.actor_optimizer = Adam(learning_rate)
+        self.critic_optimizer = Adam(learning_rate)
+
+        self.actor.compile(loss='mse', optimizer=self.actor_optimizer)
+        self.critic.compile(loss='mse', optimizer=self.critic_optimizer)
 
     def build_model(self):
         inputs = Input(shape=(self.state_size,))
@@ -32,8 +36,8 @@ class A2C_Agent:
         actor_path = os.path.join(path_prefix, "actor")
         critic_path = os.path.join(path_prefix, "critic")
 
-        self.actor.save(actor_path, save_format="tf")
-        self.critic.save(critic_path, save_format="tf")
+        self.actor.save(path_prefix + "_actor.h5")
+        self.critic.save(path_prefix + "_critic.h5")
 
         print(f"[✓] Models saved in TensorFlow format:")
         print(f"    Actor  → {actor_path}")
@@ -47,7 +51,7 @@ class A2C_Agent:
 def compute_advantage(reward, value, gamma=0.99):
     return reward + gamma * value - value
 
-def train_a2c(agent, env, episodes=1000, gamma=0.99, save_path="a2c_saved_model"):
+def train_a2c(agent, env, episodes=100, gamma=0.99, save_path="a2c_saved_model"):
     for episode in range(episodes):
         state = env.reset()
         episode_reward = 0
@@ -62,7 +66,7 @@ def train_a2c(agent, env, episodes=1000, gamma=0.99, save_path="a2c_saved_model"
             advantage = compute_advantage(reward, state_value, gamma)
 
             agent.actor.fit(state, np.array([action]), verbose=0)
-            agent.critic.fit(state, np.array([advantage]), verbose=0)
+            agent.critic.fit(state, np.array([[advantage]]), verbose=0)
 
             state = next_state
             episode_reward += reward
@@ -74,6 +78,6 @@ def train_a2c(agent, env, episodes=1000, gamma=0.99, save_path="a2c_saved_model"
     
     agent.save_models(save_path)
 
-env = MetisEnv()
+env = MetisEnv(json_path="../Data/Leetcode/questions.json")
 a2c_agent = A2C_Agent(state_size=7, action_size=1)
-train_a2c(a2c_agent, env, episodes=1000, save_path="metisCodeModel")
+train_a2c(a2c_agent, env, episodes=100, save_path="metisCodeModel")
