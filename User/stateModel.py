@@ -21,6 +21,8 @@ class StateModel:
         timestamp = data.get("timestamp")
         if timestamp is not None:
             timestamp = datetime.fromisoformat(timestamp)
+        else:
+            timestamp = datetime.now()
         return cls(
             time_taken=data.get("time_taken", 0.0),
             test_cases_passed=data.get("test_cases_passed", 0.0),

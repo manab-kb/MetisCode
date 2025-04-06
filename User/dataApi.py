@@ -34,7 +34,7 @@ def get_question_state(user_id: str, question_id: str) -> Optional[StateModel]:
 
 def update_question(user_id: str, question_id: str, question_data: StateModel) -> bool:
     try:
-        state_dict = question_data.to_dict()  # 转换为字典
+        state_dict = question_data.to_dict()  # Convert StateModel to dictionary
         
         session_ref = db.collection('Users').document(user_id).collection('sessions').document(question_id)
         session_ref.set(state_dict, merge=True)

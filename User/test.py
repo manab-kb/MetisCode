@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from User.dataApi import *
 
 # Replace with valid test values
@@ -11,11 +14,12 @@ test_question_data = {
     "difficulty_level": 0.8,
     "fatigue": 0.4,
     "streak_bonus": 1.0,
-    "timestamp": "2025-04-02T12:34:56Z"
 }
 
 state = get_current_state(test_user_id)
 print("Current state:", state)
 
-success = update_question(test_user_id, test_question_id, test_question_data)
+state_obj = StateModel.from_dict(test_question_data)
+
+success = update_question(test_user_id, test_question_id, state_obj)
 print("Question update successful:", success)
