@@ -15,6 +15,7 @@ app = Flask(__name__)
 with open('./Backend/testcase_system/all_testcases.json', 'r', encoding='utf-8') as f:
     all_testcases = json.load(f)
 
+
 @app.route('/testcases', methods=['POST'])
 def get_testcases():
     data = request.get_json()
@@ -37,7 +38,7 @@ def current_state(user_id):
     else:
         return jsonify({"error": "Current state not found for user"}), 404
 
-@app.route('/state/question/<user_id>/<question_id>', methods=['GET'])
+@app.route('/state/question/get/<user_id>/<question_id>', methods=['GET'])
 def question_state(user_id, question_id):
     state = get_question_state(user_id, question_id)
     if state is not None:
@@ -45,7 +46,7 @@ def question_state(user_id, question_id):
     else:
         return jsonify({"error": "State not found for the specified question and user"}), 404
 
-@app.route('/state/question/<user_id>/<question_id>', methods=['POST'])
+@app.route('/state/question/update/<user_id>/<question_id>', methods=['POST'])
 def update_question_state(user_id, question_id):
     data = request.get_json()
     if not data:

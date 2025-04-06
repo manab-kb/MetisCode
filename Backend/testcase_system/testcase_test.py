@@ -37,7 +37,7 @@ def test_current_state():
 def test_question_state_get():
     user_id = "user123"         # 根据实际情况修改
     question_id = "StringCompression"  # 根据实际情况修改
-    url = f"{BASE_URL}/state/question/{user_id}/{question_id}"
+    url = f"{BASE_URL}/state/question/get/{user_id}/{question_id}"
     response = requests.get(url)
     print("=== /state/question (GET) Endpoint ===")
     print("URL:", url)
@@ -53,7 +53,7 @@ def test_question_state_get():
 def test_question_state_update():
     user_id = "user123"         # 根据实际情况修改
     question_id = "StringCompression"  # 根据实际情况修改
-    url = f"{BASE_URL}/state/question/{user_id}/{question_id}"
+    url = f"{BASE_URL}/state/question/update/{user_id}/{question_id}"
     payload = {
         "time_taken": 30.0,
         "test_cases_passed": 5.0,
