@@ -1,0 +1,2958 @@
+[
+  {
+    "question_name": "String Compression",
+    "test_cases": [
+      {
+        "input": {
+          "chars": [
+            "a",
+            "a",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c"
+          ]
+        },
+        "output": "6"
+      },
+      {
+        "input": {
+          "chars": [
+            "a"
+          ]
+        },
+        "output": "1"
+      },
+      {
+        "input": {
+          "chars": [
+            "a",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b"
+          ]
+        },
+        "output": "4"
+      }
+    ]
+  },
+  {
+    "question_name": "Reverse Vowels of a String",
+    "test_cases": [
+      {
+        "input": {
+          "s": "IceCreAm"
+        },
+        "output": "AceCreIm"
+      },
+      {
+        "input": {
+          "s": "leetcode"
+        },
+        "output": "leotcede"
+      }
+    ]
+  },
+  {
+    "question_name": "Reverse Words in a String",
+    "test_cases": [
+      {
+        "input": {
+          "s": "the sky is blue"
+        },
+        "output": "blue is sky the"
+      },
+      {
+        "input": {
+          "s": "  hello world  "
+        },
+        "output": "world hello"
+      },
+      {
+        "input": {
+          "s": "a good   example"
+        },
+        "output": "example good a"
+      }
+    ]
+  },
+  {
+    "question_name": "Product of Array except self",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "output": [
+          24,
+          12,
+          8,
+          6
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            1,
+            0,
+            -3,
+            3
+          ]
+        },
+        "output": [
+          0,
+          0,
+          9,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Greatest Common Divisor of Strings",
+    "test_cases": [
+      {
+        "input": {
+          "str1": "ABCABC",
+          "str2": "ABC"
+        },
+        "output": "ABC"
+      },
+      {
+        "input": {
+          "str1": "ABABAB",
+          "str2": "ABAB"
+        },
+        "output": "AB"
+      },
+      {
+        "input": {
+          "str1": "LEET",
+          "str2": "CODE"
+        },
+        "output": ""
+      }
+    ]
+  },
+  {
+    "question_name": "Merge Strings Alternately",
+    "test_cases": [
+      {
+        "input": {
+          "word1": "abc",
+          "word2": "pqr"
+        },
+        "output": "apbqcr"
+      },
+      {
+        "input": {
+          "word1": "ab",
+          "word2": "pqrs"
+        },
+        "output": "apbqrs"
+      },
+      {
+        "input": {
+          "word1": "abcd",
+          "word2": "pq"
+        },
+        "output": "apbqcd"
+      }
+    ]
+  },
+  {
+    "question_name": "Can Place Flowers",
+    "test_cases": [
+      {
+        "input": {
+          "flowerbed": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 1
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "flowerbed": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 2
+        },
+        "output": false
+      }
+    ]
+  },
+  {
+    "question_name": "Kids With the Greatest Number of Candies",
+    "test_cases": [
+      {
+        "input": {
+          "candies": [
+            2,
+            3,
+            5,
+            1,
+            3
+          ],
+          "extraCandies": 3
+        },
+        "output": [
+          true,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "input": {
+          "candies": [
+            4,
+            2,
+            1,
+            1,
+            2
+          ],
+          "extraCandies": 1
+        },
+        "output": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "input": {
+          "candies": [
+            12,
+            1,
+            12
+          ],
+          "extraCandies": 10
+        },
+        "output": [
+          true,
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Increasing Triplet Subsequence",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            4,
+            3,
+            2,
+            1
+          ]
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            1,
+            5,
+            0,
+            4,
+            6
+          ]
+        },
+        "output": true
+      }
+    ]
+  },
+  {
+    "question_name": "Max Number of K-Sum Pairs",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 5
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            1,
+            3,
+            4,
+            3
+          ],
+          "k": 6
+        },
+        "output": 1
+      }
+    ]
+  },
+  {
+    "question_name": "Container with Most Water",
+    "test_cases": [
+      {
+        "input": {
+          "height": [
+            1,
+            8,
+            6,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7
+          ]
+        },
+        "output": 49
+      },
+      {
+        "input": {
+          "height": [
+            1,
+            1
+          ]
+        },
+        "output": 1
+      }
+    ]
+  },
+  {
+    "question_name": "Is Subsequence",
+    "test_cases": [
+      {
+        "input": {
+          "s": "abc",
+          "t": "ahbgdc"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "axc",
+          "t": "ahbgdc"
+        },
+        "output": false
+      }
+    ]
+  },
+  {
+    "question_name": "Move Zeroes",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            0,
+            1,
+            0,
+            3,
+            12
+          ]
+        },
+        "output": [
+          1,
+          3,
+          12,
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "output": [
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Max Consecutive Ones III",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "k": 2
+        },
+        "output": 6
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "k": 3
+        },
+        "output": 10
+      }
+    ]
+  },
+  {
+    "question_name": "Longest Subarray of 1's After Deleting One Element",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        "output": 5
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1
+          ]
+        },
+        "output": 2
+      }
+    ]
+  },
+  {
+    "question_name": "Maximum Number of Vowels in a Substring of Given Length",
+    "test_cases": [
+      {
+        "input": {
+          "s": "abciiidef",
+          "k": 3
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "s": "aeiou",
+          "k": 2
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "s": "leetcode",
+          "k": 3
+        },
+        "output": 2
+      }
+    ]
+  },
+  {
+    "question_name": "Maximum Average Subarray I",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            12,
+            -5,
+            -6,
+            50,
+            3
+          ],
+          "k": 4
+        },
+        "output": 12.75
+      },
+      {
+        "input": {
+          "nums": [
+            5
+          ],
+          "k": 1
+        },
+        "output": 5.0
+      }
+    ]
+  },
+  {
+    "question_name": "Planting Trees Along the Highway",
+    "test_cases": [
+      {
+        "input": {
+          "tree_sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 1
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "tree_sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 2
+        },
+        "output": false
+      }
+    ]
+  },
+  {
+    "question_name": "Deploying Wifi Towers",
+    "test_cases": [
+      {
+        "input": {
+          "location_sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 1
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "location_sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 2
+        },
+        "output": false
+      }
+    ]
+  },
+  {
+    "question_name": "Building Greenhouses",
+    "test_cases": [
+      {
+        "input": {
+          "plot_sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 1
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "plot_sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 2
+        },
+        "output": false
+      }
+    ]
+  },
+  {
+    "question_name": "Shared Melodies",
+    "test_cases": [
+      {
+        "input": {
+          "str1": "ADEADE",
+          "str2": "ADE"
+        },
+        "output": "ADE"
+      },
+      {
+        "input": {
+          "str1": "XYZXYZ",
+          "str2": "XYZXYZXYZ"
+        },
+        "output": "XYZ"
+      },
+      {
+        "input": {
+          "str1": "WXYZ",
+          "str2": "FGHI"
+        },
+        "output": ""
+      }
+    ]
+  },
+  {
+    "question_name": "Periodic Patterns",
+    "test_cases": [
+      {
+        "input": {
+          "str1": "HELLOHELLO",
+          "str2": "HELLO"
+        },
+        "output": "HELLO"
+      },
+      {
+        "input": {
+          "str1": "CDEFCDEF",
+          "str2": "CDEF"
+        },
+        "output": "CDEF"
+      },
+      {
+        "input": {
+          "str1": "ABCD",
+          "str2": "EFGH"
+        },
+        "output": ""
+      }
+    ]
+  },
+  {
+    "question_name": "Genomic Sequences",
+    "test_cases": [
+      {
+        "input": {
+          "str1": "ATCGATCG",
+          "str2": "ATCG"
+        },
+        "output": "ATCG"
+      },
+      {
+        "input": {
+          "str1": "GCAGCAG",
+          "str2": "GCAGCAGCAG"
+        },
+        "output": "GCAG"
+      },
+      {
+        "input": {
+          "str1": "TTTT",
+          "str2": "AAAA"
+        },
+        "output": ""
+      }
+    ]
+  },
+  {
+    "question_name": "Alternating DJs",
+    "test_cases": [
+      {
+        "input": {
+          "dj1_songs": "rock1 rock2 rock3",
+          "dj2_songs": "pop1 pop2 pop3"
+        },
+        "output": "rock1pop1rock2pop2rock3pop3"
+      },
+      {
+        "input": {
+          "dj1_songs": "hip1 hip2",
+          "dj2_songs": "rap1 rap2 rap3 rap4"
+        },
+        "output": "hip1rap1hip2rap2rap3rap4"
+      },
+      {
+        "input": {
+          "dj1_songs": "latin1 latin2 latin3 latin4",
+          "dj2_songs": "jazz1 jazz2"
+        },
+        "output": "latin1jazz1latin2jazz2latin3latin4"
+      }
+    ]
+  },
+  {
+    "question_name": "Weaving Textiles",
+    "test_cases": [
+      {
+        "input": {
+          "patternA": "red1 blue1 green1",
+          "patternB": "yellow1 purple1 orange1"
+        },
+        "output": "red1yellow1blue1purple1green1orange1"
+      },
+      {
+        "input": {
+          "patternA": "turq1 ma1",
+          "patternB": "pink1 pink2 pink3 pink4"
+        },
+        "output": "turq1pink1ma1pink2pink3pink4"
+      },
+      {
+        "input": {
+          "patternA": "maroon1 maroon2 maroon3 maroon4",
+          "patternB": "cyan1 cyan2"
+        },
+        "output": "maroon1cyan1maroon2cyan2maroon3maroon4"
+      }
+    ]
+  },
+  {
+    "question_name": "Alternating Narratives",
+    "test_cases": [
+      {
+        "input": {
+          "narratorA": "act1 act2 act3",
+          "narratorB": "part1 part2 part3"
+        },
+        "output": "act1part1act2part2act3part3"
+      },
+      {
+        "input": {
+          "narratorA": "scene1 scene2",
+          "narratorB": "intro1 intro2 intro3 intro4"
+        },
+        "output": "scene1intro1scene2intro2intro3intro4"
+      },
+      {
+        "input": {
+          "narratorA": "chap1 chap2 chap3 chap4",
+          "narratorB": "title1 title2"
+        },
+        "output": "chap1title1chap2title2chap3chap4"
+      }
+    ]
+  },
+  {
+    "question_name": "Musicians with the Greatest Number of Fans",
+    "test_cases":[
+      {
+        "input": {
+          "fans": [
+            2,
+            3,
+            5,
+            1,
+            3
+          ],
+          "extraFans": 3
+        },
+        "output": [
+          true,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "input": {
+          "fans": [
+            4,
+            2,
+            1,
+            1,
+            2
+          ],
+          "extraFans": 1
+        },
+        "output": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "input": {
+          "fans": [
+            12,
+            1,
+            12
+          ],
+          "extraFans": 10
+        },
+        "output": [
+          true,
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Athletes with the Greatest Number of Medals",
+    "test_cases": [
+      {
+        "input": {
+          "medals": [
+            3,
+            4,
+            5,
+            1,
+            4
+          ],
+          "extraMedals": 2
+        },
+        "output": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "input": {
+          "medals": [
+            10,
+            5,
+            5,
+            10,
+            5
+          ],
+          "extraMedals": 1
+        },
+        "output": [
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "input": {
+          "medals": [
+            10,
+            5,
+            10
+          ],
+          "extraMedals": 5
+        },
+        "output": [
+          true,
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Rising Stock Trends",
+    "test_cases": [
+      {
+        "input": {
+          "prices": [
+            10,
+            15,
+            20,
+            25,
+            30
+          ]
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "prices": [
+            30,
+            25,
+            20,
+            15,
+            10
+          ]
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "prices": [
+            20,
+            10,
+            25,
+            5,
+            30,
+            40
+          ]
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "prices": [
+            5,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "prices": [
+            2,
+            1,
+            5,
+            0,
+            4,
+            6
+          ]
+        },
+        "output": true
+      }
+    ]
+  },
+  {
+    "question_name": "Escalating Temperature Trends",
+    "test_cases": [
+      {
+        "input": {
+          "temperatures": [
+            10,
+            15,
+            20,
+            25,
+            30
+          ]
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "temperatures": [
+            30,
+            25,
+            20,
+            15,
+            10
+          ]
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "temperatures": [
+            20,
+            10,
+            25,
+            5,
+            30,
+            40
+          ]
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "temperatures": [
+            5,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "temperatures": [
+            1,
+            2,
+            1,
+            2,
+            3
+          ]
+        },
+        "output": true
+      }
+    ]
+  },
+  {
+    "question_name": "Flip Book Pages",
+    "test_cases": [
+      {
+        "input": {
+          "s": "the quick brown fox"
+        },
+        "output": "fox brown quick the"
+      },
+      {
+        "input": {
+          "s": "  you are awesome  "
+        },
+        "output": "awesome are you"
+      },
+      {
+        "input": {
+          "s": "code something   creative"
+        },
+        "output": "creative something code"
+      },
+      {
+        "input": {
+          "s": "hello"
+        },
+        "output": "hello"
+      },
+      {
+        "input": {
+          "s": "   a   b c   "
+        },
+        "output": "c b a"
+      }
+    ]
+  },
+  {
+    "question_name": "Reorder Playlist Tracks",
+    "test_cases": [
+      {
+        "input": {
+          "s": "Song1 Song2 Song3"
+        },
+        "output": "Song3 Song2 Song1"
+      },
+      {
+        "input": {
+          "s": "  Start Here  "
+        },
+        "output": "Here Start"
+      },
+      {
+        "input": {
+          "s": "Track1   Track2   Track3"
+        },
+        "output": "Track3 Track2 Track1"
+      },
+      {
+        "input": {
+          "s": "One"
+        },
+        "output": "One"
+      },
+      {
+        "input": {
+          "s": "   A B C D   "
+        },
+        "output": "D C B A"
+      }
+    ]
+  },
+  {
+    "question_name": "Reverse Text in a Chat Log",
+    "test_cases": [
+      {
+        "input": {
+          "s": "hello world"
+        },
+        "output": "world hello"
+      },
+      {
+        "input": {
+          "s": "  new message  "
+        },
+        "output": "message new"
+      },
+      {
+        "input": {
+          "s": "first   second  third"
+        },
+        "output": "third second first"
+      },
+      {
+        "input": {
+          "s": "Hi"
+        },
+        "output": "Hi"
+      },
+      {
+        "input": {
+          "s": "   latest mid oldest   "
+        },
+        "output": "oldest mid latest"
+      }
+    ]
+  },
+  {
+    "question_name": "Encoding Messages",
+    "test_cases": [
+      {
+        "input": [
+          "h",
+          "h",
+          "e",
+          "l",
+          "l",
+          "o",
+          "o",
+          "o"
+        ],
+        "output": 7,
+        "result": [
+          "h",
+          "2",
+          "e",
+          "l",
+          "2",
+          "o",
+          "3"
+        ]
+      },
+      {
+        "input": [
+          "j"
+        ],
+        "output": 1,
+        "result": [
+          "j"
+        ]
+      },
+      {
+        "input": [
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "q"
+        ],
+        "output": 4,
+        "result": [
+          "p",
+          "1",
+          "1",
+          "q"
+        ]
+      },
+      {
+        "input": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+        ],
+        "output": 6,
+        "result": [
+          "a",
+          "2",
+          "b",
+          "2",
+          "c",
+          "3"
+        ]
+      },
+      {
+        "input": [
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z"
+        ],
+        "output": 3,
+        "result": [
+          "z",
+          "1",
+          "0"
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Text Summarization",
+    "test_cases": [
+      {
+        "input": [
+          "s",
+          "s",
+          "e",
+          "e",
+          "e",
+          "t"
+        ],
+        "output": 6,
+        "result": [
+          "s",
+          "2",
+          "e",
+          "3",
+          "t"
+        ]
+      },
+      {
+        "input": [
+          "c"
+        ],
+        "output": 1,
+        "result": [
+          "c"
+        ]
+      },
+      {
+        "input": [
+          "d",
+          "d",
+          "d",
+          "d",
+          "d",
+          "d",
+          "d",
+          "d",
+          "d",
+          "d",
+          "e"
+        ],
+        "output": 4,
+        "result": [
+          "d",
+          "1",
+          "0",
+          "e"
+        ]
+      },
+      {
+        "input": [
+          "m",
+          "m",
+          "m",
+          "n",
+          "n",
+          "o"
+        ],
+        "output": 6,
+        "result": [
+          "m",
+          "3",
+          "n",
+          "2",
+          "o"
+        ]
+      },
+      {
+        "input": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x",
+          "x"
+        ],
+        "output": 3,
+        "result": [
+          "x",
+          "1",
+          "3"
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Signal Compression",
+    "test_cases": [
+      {
+        "input": [
+          "x",
+          "x",
+          "y",
+          "y",
+          "y",
+          "z"
+        ],
+        "output": 6,
+        "result": [
+          "x",
+          "2",
+          "y",
+          "3",
+          "z"
+        ]
+      },
+      {
+        "input": [
+          "k"
+        ],
+        "output": 1,
+        "result": [
+          "k"
+        ]
+      },
+      {
+        "input": [
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "v",
+          "w"
+        ],
+        "output": 4,
+        "result": [
+          "v",
+          "1",
+          "2",
+          "w"
+        ]
+      },
+      {
+        "input": [
+          "a",
+          "b",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c",
+          "c"
+        ],
+        "output": 7,
+        "result": [
+          "a",
+          "b",
+          "3",
+          "c",
+          "4"
+        ]
+      },
+      {
+        "input": [
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z",
+          "z"
+        ],
+        "output": 3,
+        "result": [
+          "z",
+          "1",
+          "0"
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Echoing Voices in a Theater",
+    "test_cases": [
+      {
+        "input": "Crescendo",
+        "output": "Crescedno"
+      },
+      {
+        "input": "Soprano",
+        "output": "Surporna"
+      },
+      {
+        "input": "Audience",
+        "output": "Eudionca"
+      },
+      {
+        "input": "VoiceOver",
+        "output": "VevicOOer"
+      },
+      {
+        "input": "aEiOu",
+        "output": "uOiEa"
+      }
+    ]
+  },
+  {
+    "question_name": "Rearranging Harmonies",
+    "test_cases": [
+      {
+        "input": "Melodia",
+        "output": "Malodio"
+      },
+      {
+        "input": "Harmony",
+        "output": "Hormany"
+      },
+      {
+        "input": "Aria",
+        "output": "Aira"
+      },
+      {
+        "input": "Sequence",
+        "output": "Seqeunce"
+      },
+      {
+        "input": "musical",
+        "output": "masicul"
+      }
+    ]
+  },
+  {
+    "question_name": "Signal Reversal in Communication",
+    "test_cases": [
+      {
+        "input": "Transmission",
+        "output": "Transmisssino"
+      },
+      {
+        "input": "Receiver",
+        "output": "Reevceir"
+      },
+      {
+        "input": "AudioInput",
+        "output": "UoidIAnput"
+      },
+      {
+        "input": "Communicate",
+        "output": "Cemmunicatoi"
+      },
+      {
+        "input": "signalVALUE",
+        "output": "segnilVUALI"
+      }
+    ]
+  },
+  {
+    "question_name": "Clearing the Warehouse",
+    "test_cases": [
+      {
+        "input": [
+          0,
+          5,
+          0,
+          10,
+          15
+        ],
+        "output": [
+          5,
+          10,
+          15,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          4,
+          0,
+          3,
+          0,
+          2
+        ],
+        "output": [
+          4,
+          3,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          1
+        ],
+        "output": [
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          1
+        ],
+        "output": [
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Sorting Library Shelves",
+    "test_cases": [
+      {
+        "input": [
+          0,
+          3,
+          0,
+          9,
+          12
+        ],
+        "output": [
+          3,
+          9,
+          12,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0
+        ],
+        "output": [
+          0
+        ]
+      },
+      {
+        "input": [
+          5,
+          0,
+          1,
+          0,
+          0
+        ],
+        "output": [
+          5,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          7,
+          8,
+          0,
+          0,
+          9
+        ],
+        "output": [
+          7,
+          8,
+          9,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          1,
+          2,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Packing for Travel",
+    "test_cases": [
+      {
+        "input": [
+          0,
+          2,
+          0,
+          4,
+          6
+        ],
+        "output": [
+          2,
+          4,
+          6,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          9,
+          0,
+          8,
+          0,
+          7
+        ],
+        "output": [
+          9,
+          8,
+          7,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          3
+        ],
+        "output": [
+          3
+        ]
+      },
+      {
+        "input": [
+          0,
+          1,
+          0,
+          2,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "question_name": "Is Musical Sequence",
+    "test_cases": [
+      {
+        "input": {
+          "s": "CDE",
+          "t": "ACDGFOX"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "CFG",
+          "t": "ACDGFOX"
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "s": "",
+          "t": "ANYTHING"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "A",
+          "t": ""
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "s": "ACF",
+          "t": "ABCDEFG"
+        },
+        "output": true
+      }
+    ]
+  },
+  {
+    "question_name": "DNA Sequence Alignment",
+    "test_cases": [
+      {
+        "input": {
+          "s": "ATC",
+          "t": "AGGTTC"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "ACG",
+          "t": "ATCG"
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "s": "",
+          "t": "AGTC"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "G",
+          "t": ""
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "s": "ATCG",
+          "t": "ATCG"
+        },
+        "output": true
+      }
+    ]
+  },
+  {
+    "question_name": "Timeline Event Sequence",
+    "test_cases": [
+      {
+        "input": {
+          "s": "ABC",
+          "t": "AHBCDE"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "AXC",
+          "t": "AHBCDE"
+        },
+        "output": false
+      },
+      {
+        "input": {
+          "s": "",
+          "t": "timeline"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "xyz",
+          "t": "xaybz"
+        },
+        "output": true
+      },
+      {
+        "input": {
+          "s": "abcd",
+          "t": "ab"
+        },
+        "output": false
+      }
+    ]
+  },
+  {
+    "question_name": "Dam with Greatest Volume",
+    "test_cases": [
+      {
+        "input": [
+          2,
+          6,
+          8,
+          4,
+          7,
+          3,
+          5,
+          9
+        ],
+        "output": 35
+      },
+      {
+        "input": [
+          10,
+          10
+        ],
+        "output": 10
+      },
+      {
+        "input": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "output": 4
+      },
+      {
+        "input": [
+          1,
+          3,
+          2,
+          5,
+          25,
+          24,
+          5
+        ],
+        "output": 24
+      },
+      {
+        "input": [
+          1,
+          2
+        ],
+        "output": 1
+      }
+    ]
+  },
+  {
+    "question_name": "Greenhouse with Most Light",
+    "test_cases": [
+      {
+        "input": [
+          3,
+          9,
+          5,
+          2,
+          7,
+          1,
+          8
+        ],
+        "output": 28
+      },
+      {
+        "input": [
+          5,
+          5
+        ],
+        "output": 5
+      },
+      {
+        "input": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "output": 4
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 2
+      },
+      {
+        "input": [
+          6,
+          2,
+          5,
+          4,
+          5,
+          1,
+          6
+        ],
+        "output": 30
+      }
+    ]
+  },
+  {
+    "question_name": "Flood Protection Barrier",
+    "test_cases": [
+      {
+        "input": [
+          1,
+          8,
+          3,
+          9,
+          2,
+          6,
+          4,
+          5
+        ],
+        "output": 32
+      },
+      {
+        "input": [
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          4,
+          3,
+          2,
+          1,
+          4
+        ],
+        "output": 16
+      },
+      {
+        "input": [
+          1,
+          2,
+          1
+        ],
+        "output": 2
+      },
+      {
+        "input": [
+          1,
+          3,
+          2,
+          5,
+          25,
+          24,
+          5
+        ],
+        "output": 24
+      }
+    ]
+  },
+  {
+    "question_name": "Pairing Products for Warehouse Optimization",
+    "test_cases": [
+      {
+        "input": {
+          "weights": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 5
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "weights": [
+            3,
+            1,
+            3,
+            4,
+            3
+          ],
+          "k": 6
+        },
+        "output": 1
+      },
+      {
+        "input": {
+          "weights": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "k": 2
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "weights": [
+            1,
+            2,
+            3
+          ],
+          "k": 4
+        },
+        "output": 1
+      },
+      {
+        "input": {
+          "weights": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "k": 10
+        },
+        "output": 2
+      }
+    ]
+  },
+  {
+    "question_name": "Maximizing Musical Pairings for Perfect Harmony",
+    "test_cases": [
+      {
+        "input": {
+          "frequencies": [
+            200,
+            250,
+            300,
+            350
+          ],
+          "k": 550
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "frequencies": [
+            300,
+            200,
+            300,
+            350,
+            300
+          ],
+          "k": 600
+        },
+        "output": 1
+      },
+      {
+        "input": {
+          "frequencies": [
+            150,
+            400,
+            150,
+            450
+          ],
+          "k": 600
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "frequencies": [
+            100,
+            100,
+            100
+          ],
+          "k": 200
+        },
+        "output": 1
+      },
+      {
+        "input": {
+          "frequencies": [
+            500
+          ],
+          "k": 1000
+        },
+        "output": 0
+      }
+    ]
+  },
+  {
+    "question_name": "Optimizing Data Transmission Pairs for Network Efficiency",
+    "test_cases": [
+      {
+        "input": {
+          "sizes": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "k": 50
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "sizes": [
+            30,
+            10,
+            30,
+            40,
+            30
+          ],
+          "k": 60
+        },
+        "output": 1
+      },
+      {
+        "input": {
+          "sizes": [
+            5,
+            45,
+            25,
+            25
+          ],
+          "k": 50
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "sizes": [
+            15,
+            35,
+            15,
+            35
+          ],
+          "k": 50
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "sizes": [
+            100
+          ],
+          "k": 100
+        },
+        "output": 0
+      }
+    ]
+  },
+  {
+    "question_name": "Peak Hour Traffic Average",
+    "test_cases": [
+      {
+        "input": {
+          "trafficDensities": [
+            10,
+            25,
+            12,
+            3,
+            50,
+            7
+          ],
+          "k": 4
+        },
+        "output": 22.5
+      },
+      {
+        "input": {
+          "trafficDensities": [
+            15
+          ],
+          "k": 1
+        },
+        "output": 15.0
+      },
+      {
+        "input": {
+          "trafficDensities": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "k": 2
+        },
+        "output": 10.0
+      },
+      {
+        "input": {
+          "trafficDensities": [
+            1,
+            100,
+            1,
+            100
+          ],
+          "k": 2
+        },
+        "output": 100.0
+      },
+      {
+        "input": {
+          "trafficDensities": [
+            10,
+            20,
+            30
+          ],
+          "k": 3
+        },
+        "output": 20.0
+      }
+    ]
+  },
+  {
+    "question_name": "Highest Classroom Performance",
+    "test_cases": [
+      {
+        "input": {
+          "studentScores": [
+            80,
+            70,
+            90,
+            85,
+            95,
+            88
+          ],
+          "k": 3
+        },
+        "output": 90.0
+      },
+      {
+        "input": {
+          "studentScores": [
+            92
+          ],
+          "k": 1
+        },
+        "output": 92.0
+      },
+      {
+        "input": {
+          "studentScores": [
+            60,
+            70,
+            80,
+            90,
+            100
+          ],
+          "k": 2
+        },
+        "output": 95.0
+      },
+      {
+        "input": {
+          "studentScores": [
+            100,
+            100,
+            100
+          ],
+          "k": 1
+        },
+        "output": 100.0
+      },
+      {
+        "input": {
+          "studentScores": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 5
+        },
+        "output": 3.0
+      }
+    ]
+  },
+  {
+    "question_name": "Maximum Crop Yield Average",
+    "test_cases": [
+      {
+        "input": {
+          "cropYields": [
+            20,
+            30,
+            10,
+            15,
+            75,
+            25
+          ],
+          "k": 3
+        },
+        "output": 40.00000
+      },
+      {
+        "input": {
+          "cropYields": [
+            36
+          ],
+          "k": 1
+        },
+        "output": 36.00000
+      },
+      {
+        "input": {
+          "cropYields": [
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "k": 2
+        },
+        "output": 45.00000
+      },
+      {
+        "input": {
+          "cropYields": [
+            -5,
+            -2,
+            -3,
+            -1
+          ],
+          "k": 2
+        },
+        "output": -2.00000
+      },
+      {
+        "input": {
+          "cropYields": [
+            1,
+            12,
+            -5,
+            -6,
+            50,
+            3
+          ],
+          "k": 4
+        },
+        "output": 12.75000
+      }
+    ]
+  },
+  {
+    "question_name": "Longest Greenhouse Row After One Tree Removal",
+    "test_cases": [
+      {
+        "input": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 3
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 5
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 2
+      },
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": 4
+      }
+    ]
+  },
+  {
+    "question_name": "Network Flow Optimization",
+    "test_cases": [
+      {
+        "input": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 3
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 5
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 2
+      },
+      {
+        "input": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "output": 2
+      },
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      }
+    ]
+  },
+  {
+    "question_name": "Tunnel Vision",
+    "test_cases": [
+      {
+        "input": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 3
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 5
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 2
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": 5
+      }
+    ]
+  },
+  {
+    "question_name": "Vowel Harvest in Orchard Rows",
+    "test_cases": [
+      {
+        "input": {
+          "s": "abciiidef",
+          "k": 3
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "s": "aeiou",
+          "k": 2
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "s": "treetreeo",
+          "k": 3
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "s": "zzzzzzzz",
+          "k": 4
+        },
+        "output": 0
+      },
+      {
+        "input": {
+          "s": "aaaabbbbcccc",
+          "k": 5
+        },
+        "output": 4
+      }
+    ]
+  },
+  {
+    "question_name": "Voice Coach's Vowel Harmony",
+    "test_cases": [
+      {
+        "input": {
+          "s": "helloiam",
+          "k": 3
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "s": "aioue",
+          "k": 3
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "s": "oiuemv",
+          "k": 4
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "s": "bcdxyz",
+          "k": 2
+        },
+        "output": 0
+      },
+      {
+        "input": {
+          "s": "aaaaa",
+          "k": 2
+        },
+        "output": 2
+      }
+    ]
+  },
+  {
+    "question_name": "Language Professor's Sentence Analysis",
+    "test_cases": [
+      {
+        "input": {
+          "s": "aioueet",
+          "k": 2
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "s": "xxyzzio",
+          "k": 3
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "s": "uieoaee",
+          "k": 3
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "s": "bcdfghjklmnpqrstvwxyz",
+          "k": 5
+        },
+        "output": 0
+      },
+      {
+        "input": {
+          "s": "aeaeaeae",
+          "k": 4
+        },
+        "output": 4
+      }
+    ]
+  },
+  {
+    "question_name": "Longest Light Sequence",
+    "test_cases": [
+      {
+        "input": {
+          "lights": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "k": 2
+        },
+        "output": 6
+      },
+      {
+        "input": {
+          "lights": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "k": 3
+        },
+        "output": 10
+      },
+      {
+        "input": {
+          "lights": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "k": 1
+        },
+        "output": 4
+      },
+      {
+        "input": {
+          "lights": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "k": 2
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "lights": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "k": 0
+        },
+        "output": 5
+      }
+    ]
+  },
+  {
+    "question_name": "Max Consecutive Signal Strength",
+    "test_cases": [
+      {
+        "input": {
+          "signals": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "k": 2
+        },
+        "output": 6
+      },
+      {
+        "input": {
+          "signals": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "k": 3
+        },
+        "output": 7
+      },
+      {
+        "input": {
+          "signals": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "k": 1
+        },
+        "output": 1
+      },
+      {
+        "input": {
+          "signals": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "k": 0
+        },
+        "output": 4
+      },
+      {
+        "input": {
+          "signals": [
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "k": 2
+        },
+        "output": 6
+      }
+    ]
+  },
+  {
+    "question_name": "Optimal Crop Alignment",
+    "test_cases": [
+      {
+        "input": {
+          "crops": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "k": 2
+        },
+        "output": 7
+      },
+      {
+        "input": {
+          "crops": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "k": 3
+        },
+        "output": 8
+      },
+      {
+        "input": {
+          "crops": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "k": 1
+        },
+        "output": 3
+      },
+      {
+        "input": {
+          "crops": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "k": 2
+        },
+        "output": 2
+      },
+      {
+        "input": {
+          "crops": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "k": 0
+        },
+        "output": 4
+      }
+    ]
+  }  
+]
